@@ -153,4 +153,4 @@ function UpdataAll(){
 	setChart2()
 	setChart3()
 }
-self.setInterval("UpdataAll()", 1000)
+self.setInterval("UpdataAll()", 2000)

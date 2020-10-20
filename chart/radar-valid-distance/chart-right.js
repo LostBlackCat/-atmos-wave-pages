@@ -187,4 +187,4 @@ function setoption(){
 		ifUpdate = false;
 	}	
 }
-self.setInterval("setoption()", 1000)	
+self.setInterval("setoption()", 1000)

@@ -229,4 +229,4 @@ function setoption(timeData){
 	chart_left.setOption(option);
 }
 setoption(timeData)
-self.setInterval("setoption(timeData)", 1000)
+self.setInterval("setoption(timeData)", 2000)

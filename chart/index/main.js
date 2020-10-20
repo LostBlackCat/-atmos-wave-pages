@@ -529,7 +529,7 @@ option4 = {
 
 setoption(timeData)
 
-self.setInterval("setoption(timeData)", 3000)
+self.setInterval("setoption(timeData)", 2000)
 
 //setInterval(setoption(timeData), 1500);
 

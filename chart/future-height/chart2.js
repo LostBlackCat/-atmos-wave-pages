@@ -70,9 +70,9 @@ var chart2 = echarts.init(document.getElementById("main"))
 
 					RMSE_html.value = RMSE_total.toString().substring(0, 6)
 
-					MAP_html.value = (MAP_total * 100).toString().substring(0, 6) + "%"
-					MAPE_html.value = MAPE_total.toString().substring(0, 6)
-					R2_html.value = R2_total.toString().substring(0, 6)
+					MAPE_html.value = (MAPE_total * 100).toString().substring(0, 6) + "%"
+					MAP_html.value = MAP_total.toString().substring(0, 6)
+					R2_html.value = (R2_total * 100).toString().substring(0, 6) + "%"
 					NextValue = Math.random() * 100
 					NV_html.value = NextValue.toString().substring(0, 6)
 				}
@@ -266,5 +266,5 @@ Total()
 //chart_right.setOption(option);
 setoption(timeData)
 
-self.setInterval("setoption(timeData)", 1000)
+self.setInterval("setoption(timeData)", 2000)
 				
