@@ -24,7 +24,18 @@ function nextElecData(){
 
 option_right = {
 			  color: colors,
-			  
+			  toolbox: {
+				show: true,
+				right:'50%',
+				feature: {
+					dataZoom: {
+						yAxisIndex: 'none'
+					},
+					dataView: {readOnly: true},
+					restore: {},
+					saveAsImage: {}
+				}
+			},
 			  tooltip: {
 				   trigger: 'axis',
 				   axisPointer: {

@@ -82,7 +82,18 @@ function nextvalue(){
 
 option_left = {
   color: colors,
- 
+  toolbox: {
+	show: true,
+	right:'50%',
+	feature: {
+		dataZoom: {
+			yAxisIndex: 'none'
+		},
+		dataView: {readOnly: true},
+		restore: {},
+		saveAsImage: {}
+	}
+  },
   tooltip: {
 	   trigger: 'axis',
 	   axisPointer: {

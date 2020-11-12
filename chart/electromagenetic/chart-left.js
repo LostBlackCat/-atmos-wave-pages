@@ -89,6 +89,18 @@ option_left = {
 			animation: false
 		}
 	},
+	toolbox: {
+		show: true,
+		right:'50%',
+        feature: {
+            dataZoom: {
+                yAxisIndex: 'none'
+            },
+            dataView: {readOnly: true},
+            restore: {},
+            saveAsImage: {}
+        }
+    },
 	legend: {
 	   data: ['修正大气折射率'],
 	   left: 10
