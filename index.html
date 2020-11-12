@@ -135,11 +135,18 @@
 								</ul>
 							</div>
 							<div class="topnav-dropdown-footer">
-								<a href="#">View all Notifications</a>
+								<a href="report.html">查看所有报告信息</a>
 							</div>
 						</div>
 					</li>
-					<!-- /Notifications -->
+					<!-- Notifications -->
+					<!-- Write -->
+					<li >
+						<a data-toggle="modal" href="#text_inputs" title="信息上报">
+							<i class="fe fe-file"></i>
+						</a>
+					</li>
+					<!-- Write -->
 					<!-- download-->
 					<li >
 						<a href="#" title="数据导出">
@@ -159,7 +166,7 @@
 			
 						</div>
 					</li>
-					<!-- /download>
+					<!-- /download -->
 					<!-- upload -->
 					<li class="nav-item dropdown noti-dropdown">
 						<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" title="数据导入">
@@ -440,7 +447,7 @@
 										
 										<h6 class="text-muted">大气压强</h6>
 										<div class="progress progress-sm">
-											<div class="progress-bar bg-danger w-50"></div>
+											<div class="progress-bar bg-warning w-50"></div>
 										</div>
 									</div>
 								</div>
@@ -566,8 +573,94 @@
 			</div>
 			<!-- /Page Wrapper -->
 		
-        </div>
+		</div>
 		
+		<!-- <div class="modal fade" id="text_inputs" aria-hidden="true" role="dialog">
+			<div class="modal-dialog" style="max-width: 40%;margin-left: 30%;margin-top: 20%;" role="document" >
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">信息上报</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form>
+							<div class="form-group row">
+								<label class="col-form-label col-md-2">主题</label>
+								<div class="col-md-10">
+									<input type="text" class="form-control">
+								</div>
+							</div>
+							<div class="form-group row">
+								<label class="col-form-label col-md-2">收信人/审核人</label>
+								<div class="col-md-10">
+									<input type="text" class="form-control">
+								</div>
+							</div>
+							<div class="form-group row">
+								<label class="col-form-label col-md-2">附件</label>
+								<div class="col-md-10">
+									<input class="form-control" type="file">
+								</div>
+							</div>
+									
+							<div class="form-group row">
+								<label class="col-form-label col-md-2">信息栏</label>
+								<div class="col-md-10">
+										<textarea rows="5" cols="5" class="form-control" placeholder="请输入..."></textarea>
+								</div>
+							</div>
+							<button type="submit" class="btn btn-primary btn-block">确定</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div> -->
+		<script src="js/dialog.js"></script>
+		<!-- <div class="modal fade" id="text_inputs" aria-hidden="true" role="dialog"> 
+			<div role="document" class="modal-dialog" style="max-width: 40%;margin-left: 30%;margin-top: 20%;">				
+				<div class="card">
+					<div class="modal-header">
+						<h5 class="modal-title">信息上报</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="card-body">
+						<form action="#">
+							<div class="form-group row">
+								<label class="col-form-label col-md-2">主题</label>
+								<div class="col-md-10">
+									<input type="text" class="form-control">
+								</div>
+							</div>
+							<div class="form-group row">
+								<label class="col-form-label col-md-2">收信人/审核人</label>
+								<div class="col-md-10">
+									<input type="text" class="form-control">
+								</div>
+							</div>
+							<div class="form-group row">
+								<label class="col-form-label col-md-2">附件</label>
+								<div class="col-md-10">
+									<input class="form-control" type="file">
+								</div>
+							</div>
+									
+						<div class="form-group row">
+							<label class="col-form-label col-md-2">信息栏</label>
+								<div class="col-md-10">
+										<textarea rows="5" cols="5" class="form-control" placeholder="请输入..."></textarea>
+								</div>
+							</div>
+							<button type="submit" class="btn btn-primary btn-block">确定</button>
+						</form>
+					</div>
+				</div>
+			</div>		
+		</div>	 -->
+
 		<!-- /Main Wrapper -->
 		
 		<!-- jQuery -->

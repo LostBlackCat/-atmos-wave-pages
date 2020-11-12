@@ -426,7 +426,9 @@ button.bg-info:focus,
 button.bg-info:hover {
     background-color: #028ee1 !important;
 }
-.bg-warning,
+.bg-warning{
+	background-color: #FDC839 !important;
+}
 .badge-warning {
 	background-color: #FDC839 !important;
 }
@@ -436,7 +438,9 @@ button.bg-warning:focus,
 button.bg-warning:hover {
     background-color: #e9ab2e !important;
 }
-.bg-danger,
+.bg-danger{
+	background-color: #fb2828 !important;
+}
 .badge-danger {
 	background-color: #FDC839 !important;
 }

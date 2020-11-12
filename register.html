@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-        <title>Mentoring - Register</title>
+        <title>注册</title>
 		
 		<!-- Favicon -->
         <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
@@ -38,21 +38,21 @@
 								<p class="account-subtitle">访问我们的首页</p>
 								
 								<!-- Form -->
-								<form action="login.html">
+								<form name="submit_form" id="submit_form" action="#">
 									<div class="form-group">
-										<input class="form-control" type="text" placeholder="用户名称"">
+										<input id="username" class="form-control" type="text" placeholder="用户名称">
 									</div>
 									<div class="form-group">
-										<input class="form-control" type="text" placeholder="电子邮箱">
+										<input id="email" class="form-control" type="text" placeholder="电子邮箱">
 									</div>
 									<div class="form-group">
-										<input class="form-control" type="text" placeholder="密码">
+										<input id="password" class="form-control" type="password" placeholder="密码">
 									</div>
 									<div class="form-group">
-										<input class="form-control" type="text" placeholder="确认密码">
+										<input id="confirmation" class="form-control" type="password" placeholder="确认密码">
 									</div>
 									<div class="form-group mb-0">
-										<button class="btn btn-primary btn-block" type="submit">注册</button>
+										<button class="btn btn-primary btn-block" type="submit" onclick="alert_something()">注册</button>
 									</div>
 								</form>
 								<!-- /Form -->
@@ -62,14 +62,7 @@
 									<span class="span-or">or</span>
 								</div>
 								
-								<!-- Social Login -->
-								<div class="social-login">
-									<span>关联注册</span>
-									<a href="#" class="facebook"><i class="fa fa-facebook"></i></a><a href="#" class="google"><i class="fa fa-google"></i></a>
-								</div>
-								<!-- /Social Login -->
-								
-								<div class="text-center dont-have">已有账户? <a href="login.html">登录</a></div>
+								<div class="text-center dont-have">已有账户? <a href="">登录</a></div>
 							</div>
                         </div>
                     </div>
@@ -77,7 +70,84 @@
             </div>
         </div>
 		<!-- /Main Wrapper -->
-		
+		<!-- alart -->
+		<script>
+			function is_email(emailAddr){
+				if((emailAddr == null) || (emailAddr.length < 2)) return false ;
+				var aPos = emailAddr.indexOf("@" ,1) ;
+				if(aPos < 0)
+    			{
+        			return false ;
+				}
+				if(emailAddr.indexOf("." ,aPos+2) < 0)
+    			{
+        			return false ;
+				}
+				return true;
+			}
+			// function is_forbid(temp_str){
+			// 	temp_str = trimTxt(temp_str);
+			// 	temp_str = temp_str.replace('*',"@");
+			// 	temp_str = temp_str.replace('--',"@");
+			// 	temp_str = temp_str.replace('/',"@");
+			// 	temp_str = temp_str.replace('+',"@");
+			// 	temp_str = temp_str.replace('\'',"@");
+			// 	temp_str = temp_str.replace('\\',"@");
+			// 	temp_str = temp_str.replace('$',"@");
+			// 	temp_str = temp_str.replace('^',"@");
+			// 	temp_str = temp_str.replace('.',"@");
+			// 	temp_str = temp_str.replace(';',"@");
+			// 	temp_str = temp_str.replace('<',"@");
+			// 	temp_str = temp_str.replace('>',"@");
+			// 	temp_str = temp_str.replace('"',"@");
+			// 	temp_str = temp_str.replace('=',"@");
+			// 	temp_str = temp_str.replace('{',"@");
+			// 	temp_str = temp_str.replace('}',"@");
+			// 	var forbid_str=new String('@,%,~,&');
+			// 	var forbid_array=new Array();
+			// 	forbid_array=forbid_str.split(',');
+			// 	for(i=0;i<forbid_array.length;i++){
+			// 		if(temp_str.search(new RegExp(forbid_array[i])) != -1)
+			// 		return false;
+			// 	}
+			// 	return true;
+			// }
+			function alert_something(){
+				username = document.getElementById("username").value
+				console.log(username)
+				email = document.getElementById("email").value
+				password = document.getElementById("password").value
+				confirmation = document.getElementById("confirmation").value
+				if(username=="")
+				{
+					alert("用户名输入有误！")
+				}
+				else if(email=="" || !is_email(email))
+				{
+					alert("邮箱输入有误！")
+				}
+				else if(password=="")
+				{
+					alert("密码必须输入！")
+				}
+				else if(confirmation=="")
+				{
+					alert("密码必须确认！")
+				}
+				else if(confirmation != password)
+				{
+					alert("密码输入不一致！")
+				}
+				else{
+					alert("注册通过！")
+					document.submit_form.action = "login.html"
+					submit_form.submit()
+					//$('#submit_form').action = "login.html"
+					//$('#submit_form').submit()
+				}
+			}
+		</script>
+		<!-- alart -->
 		<!-- jQuery -->
         <script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
 		
