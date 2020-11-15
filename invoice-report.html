@@ -138,11 +138,12 @@
 								function hidder(){
 									document.getElementById('zhezhao').style.display="none";
 								}
+
 							</script>
 			
 						</div>
 					</li>
-					<!-- /download>
+					<!-- /download-->
 					<!-- upload -->
 					<li class="nav-item dropdown noti-dropdown">
 						<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" title="数据导入">
@@ -379,23 +380,23 @@
 											</thead>
 											<tbody>
 												<tr>
-													<td><a href="invoice.html">#IN0001</a></td>
+													<td><a href="invoice.html" id="num_1">#IN0001</a></td>
 													<td>#01</td>
 													<td>
 														<h2 class="table-avatar">
 															<a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/user/user0.jpg" alt="User Image"></a>
-															<a href="profile.html">汪宇晖 </a>
+															<a id="name_1" href="profile.html">汪宇晖 </a>
 														</h2>
 													</td>
-													<td>管理员</td>
-													<td>2019年9月9日</td>
+													<td id="identity_1">管理员</td>
+													<td id="time_1">2019年9月9日</td>
 													<td class="text-center">
-														<span class="badge badge-pill bg-success inv-badge">良好</span>
+														<span class="badge badge-pill bg-success inv-badge">在线</span>
 													</td>
 													<td class="text-right">
 														<div class="actions">
 															
-															<a data-toggle="modal" href="#edit_invoice_report" class="btn btn-sm bg-success-light mr-2">
+															<a href="#edit_invoice_report" data-toggle="modal" onclick="edit(1)" class="btn btn-sm bg-success-light mr-2">
 																<i class="fe fe-pencil"></i> 编辑
 															</a>
 															<a class="btn btn-sm bg-danger-light" data-toggle="modal" href="#delete_modal">
@@ -405,23 +406,23 @@
 													</td>
 												</tr>
 												<tr>
-													<td><a href="invoice.html">#IN0002</a></td>
+													<td><a href="invoice.html" id="num_2">#IN0002</a></td>
 													<td>#02</td>
 													<td>
 														<h2 class="table-avatar">
 															<a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/user/user0.jpg" alt="User Image"></a>
-															<a href="profile.html">飞飞飞 </a>
+															<a id="name_2" href="profile.html">飞飞飞 </a>
 														</h2>
 													</td>
-													<td>值班用户</td>
-													<td>2019年10月29日</td>
+													<td id="identity_2">值班用户</td>
+													<td id="time_2">2019年10月29日</td>
 													<td class="text-center">
-														<span class="badge badge-pill bg-success inv-badge">良好</span>
+														<span class="badge badge-pill bg-success inv-badge">在线</span>
 													</td>
 													<td class="text-right">
 														<div class="actions">
 															
-															<a data-toggle="modal" href="#edit_invoice_report" class="btn btn-sm bg-success-light mr-2">
+															<a href="#edit_invoice_report" data-toggle="modal" onclick="edit(2)" class="btn btn-sm bg-success-light mr-2">
 																<i class="fe fe-pencil"></i> 编辑
 															</a>
 															<a class="btn btn-sm bg-danger-light" data-toggle="modal" href="#delete_modal">
@@ -431,23 +432,23 @@
 													</td>
 												</tr>
 												<tr>
-													<td><a href="invoice.html">#IN0003</a></td>
+													<td><a href="invoice.html" id="num_3">#IN0003</a></td>
 													<td>#03</td>
 													<td>
 														<h2 class="table-avatar">
 															<a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/user/user0.jpg" alt="User Image"></a>
-															<a href="profile.html">云云云</a>
+															<a id="name_3" href="profile.html">云云云</a>
 														</h2>
 													</td>
-													<td>值班用户</td>
-													<td>2019年9月5日</td>
+													<td id="identity_3">值班用户</td>
+													<td id="time_3">2019年9月5日</td>
 													<td class="text-center">
-														<span class="badge badge-pill bg-success inv-badge">良好</span>
+														<span class="badge badge-pill bg-outline inv-badge">离线</span>
 													</td>
 													<td class="text-right">
 														<div class="actions">
 															
-															<a data-toggle="modal" href="#edit_invoice_report" class="btn btn-sm bg-success-light mr-2">
+															<a href="#edit_invoice_report" data-toggle="modal" onclick="edit(3)" class="btn btn-sm bg-success-light mr-2">
 																<i class="fe fe-pencil"></i> 编辑
 															</a>
 															<a class="btn btn-sm bg-danger-light" data-toggle="modal" href="#delete_modal">
@@ -457,23 +458,23 @@
 													</td>
 												</tr>
 												<tr>
-													<td><a href="invoice.html">#IN0004</a></td>
+													<td><a href="invoice.html" id="num_4">#IN0004</a></td>
 													<td>#04</td>
 													<td>
 														<h2 class="table-avatar">
 															<a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/user/user0.jpg" alt="User Image"></a>
-															<a href="profile.html">白白白</a>
+															<a id="name_4" href="profile.html">白白白</a>
 														</h2>
 													</td>
-													<td>值班用户</td>
-													<td>2019年10月9日</td>
+													<td id="identity_4">值班用户</td>
+													<td id="time_4">2019年10月9日</td>
 													<td class="text-center">
-														<span class="badge badge-pill bg-success inv-badge">良好</span>
+														<span class="badge badge-pill bg-outline inv-badge">离线</span>
 													</td>
 													<td class="text-right">
 														<div class="actions">
 															
-															<a data-toggle="modal" href="#edit_invoice_report" class="btn btn-sm bg-success-light mr-2">
+															<a href="#edit_invoice_report" data-toggle="modal" onclick="edit(4)" class="btn btn-sm bg-success-light mr-2">
 																<i class="fe fe-pencil"></i> 编辑
 															</a>
 															<a class="btn btn-sm bg-danger-light" data-toggle="modal" href="#delete_modal">
@@ -482,59 +483,6 @@
 														</div>
 													</td>
 												</tr>
-												<tr>
-													<td><a href="invoice.html">#IN0005</a></td>
-													<td>#05</td>
-													<td>
-														<h2 class="table-avatar">
-															<a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/user/user0.jpg" alt="User Image"></a>
-															<a href="profile.html">九九九 </a>
-														</h2>
-													</td>
-													<td>普通用户</td>
-													<td>2019年11月19日</td>
-													<td class="text-center">
-														<span class="badge badge-pill bg-success inv-badge">良好</span>
-													</td>
-													<td class="text-right">
-														<div class="actions">
-															
-															<a data-toggle="modal" href="#edit_invoice_report" class="btn btn-sm bg-success-light mr-2">
-																<i class="fe fe-pencil"></i> 编辑
-															</a>
-															<a class="btn btn-sm bg-danger-light" data-toggle="modal" href="#delete_modal">
-																<i class="fe fe-trash"></i> 删除
-															</a>
-														</div>
-													</td>
-												</tr>
-												<tr>
-													<td><a href="invoice.html">#IN0006</a></td>
-													<td>#06</td>
-													<td>
-														<h2 class="table-avatar">
-															<a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/user/user0.jpg" alt="User Image"></a>
-															<a href="profile.html">皮颜萍</a>
-														</h2>
-													</td>
-													<td>普通用户</td>
-													<td>2019年10月12日</td>
-													<td class="text-center">
-														<span class="badge badge-pill bg-success inv-badge">良好</span>
-													</td>
-													<td class="text-right">
-														<div class="actions">
-															
-															<a data-toggle="modal" href="#edit_invoice_report" class="btn btn-sm bg-success-light mr-2">
-																<i class="fe fe-pencil"></i> 编辑
-															</a>
-															<a class="btn btn-sm bg-danger-light" data-toggle="modal" href="#delete_modal">
-																<i class="fe fe-trash"></i> 删除
-															</a>
-														</div>
-													</td>
-												</tr>
-												
 											</tbody>
 										</table>
 									</div>
@@ -543,19 +491,91 @@
 						</div>			
 					</div>
 					
-				</div>			
-			</div>
+					<div class="card">
+						<div class="card-header">
+							<h4 class="card-title" id='detail_number' style="float:left; width:50%">其他操作</h4>		
+						</div>
+						<div class="card-body" style="padding-bottom: 0%;">
+							<form action="#">
+						
+								<div class="form-group">
+									<div style="border-left: 1px solid #eaeaea;margin-bottom: 1%;padding-bottom: 1%;border-bottom: 1px solid #eaeaea;border-right: 1px solid #eaeaea;width: 60%;float:left;">
+										<input id="members" type="text" placeholder="请输入用户账号..." style="width: 80%; margin-left: 3%;font-size: 20px;">
+										<button class="btn btn-primary" type="button" onclick="search_member()" style="margin-left: 3%;margin-right: 2%;background-color: #6610f2;border: 1px solid #6610f2;">搜索用户</button>
+									</div>
+									<div style="width: 12%;float: left;padding-left: 4%;border-bottom: 1px solid #eaeaea;border-right: 1px solid #eaeaea;padding-bottom: 1.03%;">
+										<a data-toggle="modal" href="#edit_invoice_report">
+											<button class="btn btn-primary"type="button">新增用户</button>
+										</a>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="row" id="searched_content" style="display: none;">
+							<h5 style="color: cornflowerblue;margin-left: 2%;">搜索</h5><h5 id="searched_head" style="color:#FF7F50;"></h5><h5 style="color: cornflowerblue;">结果：</h5>
+							<div class="col-sm-12">
+								<div class="card">
+									<div class="card-body">
+										<div class="table-responsive">
+											<table class="datatable table table-hover table-center mb-0">
+												<thead>
+													<tr>
+														<th>用户账号</th>
+														<th>排列序号</th>
+														<th>用户名称</th>
+														<th>用户身份</th>
+														<th>创建日期</th>
+														<th class="text-center">状态</th>
+														<th class="text-center">操作</th>
+													</tr>
+												</thead>
+												<tbody id="searched">
+													<tr>
+														<td><a href="invoice.html" id="num_1">#IN0001</a></td>
+														<td>#01</td>
+														<td>
+															<h2 class="table-avatar">
+																<a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/user/user0.jpg" alt="User Image"></a>
+																<a id="name_1" href="profile.html">汪宇晖 </a>
+															</h2>
+														</td>
+														<td id="identity_1">管理员</td>
+														<td id="time_1">2019年9月9日</td>
+														<td class="text-center">
+															<span class="badge badge-pill bg-success inv-badge">在线</span>
+														</td>
+														<td class="text-right">
+															<div class="actions">
+																
+																<a href="#edit_invoice_report" data-toggle="modal" onclick="edit(1)" class="btn btn-sm bg-success-light mr-2">
+																	<i class="fe fe-pencil"></i> 编辑
+																</a>
+																<a class="btn btn-sm bg-danger-light" data-toggle="modal" href="#delete_modal">
+																	<i class="fe fe-trash"></i> 删除
+																</a>
+															</div>
+														</td>
+													</tr>
+													
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>			
+						</div>
+					</div>
+					
 			<!-- /Page Wrapper -->
 			
         </div>
 		<!-- /Main Wrapper -->
-
 		<!-- Edit Details Modal -->
 		<div class="modal fade" id="edit_invoice_report" aria-hidden="true" role="dialog">
 			<div class="modal-dialog modal-dialog-centered" role="document" >
 				<div class="modal-content">
 					<div class="modal-header">
-						<h5 class="modal-title">Edit Invoice Report</h5>
+						<h5 class="modal-title">用户信息编辑</h5>
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 							<span aria-hidden="true">&times;</span>
 						</button>
@@ -566,19 +586,31 @@
 								<div class="col-12 col-sm-6">
 									<div class="form-group">
 										<label>用户账号</label>
-										<input type="text" class="form-control" value="#INV-0001">
+										<input id="Number" type="text" class="form-control" value="#INV-0001">
 									</div>
 								</div>
 								<div class="col-12 col-sm-6">
 									<div class="form-group">
 										<label>用户名称</label>
-										<input type="text" class="form-control" value="汪宇晖">
+										<input id="Name" type="text" class="form-control" value="汪宇晖">
+									</div>
+								</div>
+								<div class="col-12 col-sm-6">
+									<div class="form-group">
+										<label>用户密码</label>
+										<input type="password" class="form-control" value="123">
+									</div>
+								</div>
+								<div class="col-12 col-sm-6">
+									<div class="form-group">
+										<label>确认密码</label>
+										<input type="password" class="form-control" value="123">
 									</div>
 								</div>
 								<div class="col-12 col-sm-6">
 									<div class="form-group">
 										<label>用户身份</label>
-										<input type="text" class="form-control" value="管理员">
+										<input id="Identity" type="text" class="form-control" value="管理员">
 									</div>
 								</div>
 								<div class="col-12 col-sm-6">
@@ -590,7 +622,7 @@
 								<div class="col-12 col-sm-6">
 									<div class="form-group">
 										<label>创建日期</label>
-										<input type="text"  class="form-control" value="9th Sep 2019">
+										<input id="Time" type="text"  class="form-control" value="9th Sep 2019">
 									</div>
 								</div>
 								<div class="col-12 col-sm-6">
@@ -631,7 +663,68 @@
 			</div>
 		</div>
 		<!-- /Delete Modal -->
-		
+		<script type="text/javascript">
+			function edit(num){
+				console.log(num)
+				name_="name_"+num
+				number_="num_"+num
+				identity_="identity_"+num
+				time_="time_"+num
+				console.log(name_)		
+				document.getElementById("Name").value=document.getElementById(name_).innerHTML
+				console.log(document.getElementById(number_).innerHTML)
+				document.getElementById("Number").value=document.getElementById(number_).innerHTML
+				console.log(document.getElementById(time_).innerHTML)
+				document.getElementById("Time").value=document.getElementById(time_).innerHTML
+				console.log(document.getElementById(identity_).innerHTML)
+				document.getElementById("Identity").value=document.getElementById(identity_).innerHTML
+			}s
+			function sedit(num){
+				console.log(num)
+				name_="sname_"+num
+				number_="snum_"+num
+				identity_="sidentity_"+num
+				time_="stime_"+num
+				console.log(name_)		
+				document.getElementById("Name").value=document.getElementById(name_).innerHTML
+				console.log(document.getElementById(number_).innerHTML)
+				document.getElementById("Number").value=document.getElementById(number_).innerHTML
+				console.log(document.getElementById(time_).innerHTML)
+				document.getElementById("Time").value=document.getElementById(time_).innerHTML
+				console.log(document.getElementById(identity_).innerHTML)
+				document.getElementById("Identity").value=document.getElementById(identity_).innerHTML
+			}
+			function search_member(){
+				member_number = document.getElementById("members").value
+				document.getElementById("searched_head").innerHTML="“"+member_number+"”"
+				console.log(1)
+				snumber = '#000001'
+				sname = '汪宇晖'
+				sidentity = '管理员'
+				stime='2019年1月12日'
+				i=1
+				state='在线'
+				if(state=="在线"){
+					state_bg = "bg-success"
+				}
+				else{
+					state_bg = "bg-outline"
+				}
+				$("#searched").empty()
+				lens = 3
+				//查询结果这里加循环即可
+				for(i=1;i<lens;i++)
+				{
+					var searched_content ='<tr>'+'<td><a href="invoice.html" id="snum_'+i+'">'+ snumber + '</a></td>'+'<td>'+'#0'+i+'</td>'+
+					'<td><h2 class="table-avatar"><a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/user/user0.jpg" alt="User Image"></a><a id="sname_'+i+'" href="profile.html">'+sname+
+					'</a></h2></td><td id="sidentity_1">'+sidentity+'</td><td id="stime_'+i+'">'+stime+'</td><td class="text-center"><span class="badge '+state_bg+ ' badge-pill inv-badge">'+state+'</span></td><td class="text-right"><div class="actions">'+
+					'<a href="#edit_invoice_report" data-toggle="modal" onclick="sedit('+i+')" class="btn btn-sm bg-success-light mr-2"><i class="fe fe-pencil"></i> 编辑</a><a class="btn btn-sm bg-danger-light" data-toggle="modal" href="#delete_modal">'+
+					'<i class="fe fe-trash"></i> 删除</a></div></td></tr>'
+					$("#searched").append(searched_content)
+				}
+				document.getElementById('searched_content').style.display="";
+			}
+		</script>
 		<!-- jQuery -->
         <script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
 		
