@@ -22,7 +22,8 @@
 		
 		<!-- Main CSS -->
         <link rel="stylesheet" href="assets/css/style.css">
-		
+	
+
 		<!--[if lt IE 9]>
 			<script src="assets/js/html5shiv.min.js"></script>
 			<script src="assets/js/respond.min.js"></script>
@@ -118,7 +119,7 @@
             					</ul>
             				</div>
             				<div class="topnav-dropdown-footer">
-            					<a href="#">View all Notifications</a>
+            					<a href="report.html">查看所有报告信息</a>
             				</div>
             			</div>
             		</li>
@@ -360,10 +361,54 @@
 						</div>
 					</div>
 					<!-- /Page Header -->
-					
-					<div class="row">
+					<div class="card">
+						<div class="card-header">
+							<h4 class="card-title" id='detail_number' style="float:left; width:50%">用户查询</h4>		
+						</div>
+						<div class="card-body" style="padding-bottom: 0%;">
+							<form action="#">
+								
+								<div class="form-group" style="width: 90%;">
+									<div style="border-left: 1px solid #eaeaea;margin-bottom: 1%;padding-bottom: 1%;border-bottom: 1px solid #eaeaea;border-right: 1px solid #eaeaea;width: 40%;float:left;">
+										<div class="btn-group" style="width: 100%;">
+											<div class="col-lg-10">
+												<div class="card-body">
+													<ul class="nav nav-tabs nav-tabs-solid">
+														<li class="nav-item"><a class="nav-link active" href="#solid-tab1" data-toggle="tab">账号搜索</a></li>
+														<li class="nav-item"><a class="nav-link" href="#solid-tab2" data-toggle="tab">姓名查询</a></li>
+														<li class="nav-item"><a class="nav-link" href="#solid-tab3" data-toggle="tab">部门查询</a></li>
+													</ul>
+													<div class="tab-content">
+														<div class="tab-pane show active" id="solid-tab1">
+															<input type="text" id="members" class="form-control" placeholder="请输入账号...">
+															<button class="btn btn-primary" type="button" onclick="search_member()" style="float:right;background-color: #0794f3ab;border: 1px solid #0794f3ab;">搜索用户</button>
+														</div>
+														<div class="tab-pane" id="solid-tab2">
+															<input type="text" id="names" class="form-control" placeholder="请输入姓名...">
+															<button class="btn btn-primary" type="button" onclick="search_name()" style="float:right;background-color: #0794f3ab;border: 1px solid #0794f3ab;">搜索用户</button>
+														</div>
+														<div class="tab-pane" id="solid-tab3">
+															<input type="text" id="sections" class="form-control" placeholder="请输入部门...">
+															<button class="btn btn-primary" type="button" onclick="search_section()" style="float:right;background-color: #0794f3ab;border: 1px solid  #0794f3ab;">搜索用户</button>
+														</div>
+													</div>
+													
+												</div>
+											</div>
+										</div>
+										
+									</div>
+									
+								</div>
+							</form>
+						</div>
+					</div>
+					<div id="all_members" class="row">
 						<div class="col-sm-12">
 							<div class="card">
+								<div class="card-header">
+									<h4 class="card-title" style="float:left; width:50%">所有用户</h4>		
+								</div>
 								<div class="card-body">
 									<div class="table-responsive">
 										<table class="datatable table table-hover table-center mb-0">
@@ -488,29 +533,15 @@
 									</div>
 								</div>
 							</div>
+						</div>
+						<div style="width: 100%;float: right;padding-right: 1%;padding-bottom: 1%;padding-top: 1%;">
+							<a data-toggle="modal" href="#edit_invoice_report" style="float: right;">
+								<button class="btn btn-primary" type="button">新增用户</button>
+							</a>
 						</div>			
 					</div>
 					
-					<div class="card">
-						<div class="card-header">
-							<h4 class="card-title" id='detail_number' style="float:left; width:50%">其他操作</h4>		
-						</div>
-						<div class="card-body" style="padding-bottom: 0%;">
-							<form action="#">
-						
-								<div class="form-group">
-									<div style="border-left: 1px solid #eaeaea;margin-bottom: 1%;padding-bottom: 1%;border-bottom: 1px solid #eaeaea;border-right: 1px solid #eaeaea;width: 60%;float:left;">
-										<input id="members" type="text" placeholder="请输入用户账号..." style="width: 80%; margin-left: 3%;font-size: 20px;">
-										<button class="btn btn-primary" type="button" onclick="search_member()" style="margin-left: 3%;margin-right: 2%;background-color: #6610f2;border: 1px solid #6610f2;">搜索用户</button>
-									</div>
-									<div style="width: 12%;float: left;padding-left: 4%;border-bottom: 1px solid #eaeaea;border-right: 1px solid #eaeaea;padding-bottom: 1.03%;">
-										<a data-toggle="modal" href="#edit_invoice_report">
-											<button class="btn btn-primary"type="button">新增用户</button>
-										</a>
-									</div>
-								</div>
-							</form>
-						</div>
+					
 						<div class="row" id="searched_content" style="display: none;">
 							<h5 style="color: cornflowerblue;margin-left: 2%;">搜索</h5><h5 id="searched_head" style="color:#FF7F50;"></h5><h5 style="color: cornflowerblue;">结果：</h5>
 							<div class="col-sm-12">
@@ -562,13 +593,20 @@
 										</div>
 									</div>
 								</div>
-							</div>			
+							</div>		
+							<div style="width: 100%;float: right;padding-right: 1%;padding-bottom: 1%;padding-top: 1%;">
+								<button class="btn btn-primary" type="button" onclick="return_page()" style="background-color: mediumpurple;border: 1px solid #6610f2;float: right;margin-left: 1%;">返回主页</button>
+								<a data-toggle="modal" href="#edit_invoice_report" style="float: right;">
+									<button class="btn btn-primary" type="button">新增用户</button>
+								</a>
+							</div>		
 						</div>
+						
 					</div>
 					
 			<!-- /Page Wrapper -->
 			
-        </div>
+        
 		<!-- /Main Wrapper -->
 		<!-- Edit Details Modal -->
 		<div class="modal fade" id="edit_invoice_report" aria-hidden="true" role="dialog">
@@ -678,7 +716,7 @@
 				document.getElementById("Time").value=document.getElementById(time_).innerHTML
 				console.log(document.getElementById(identity_).innerHTML)
 				document.getElementById("Identity").value=document.getElementById(identity_).innerHTML
-			}s
+			}
 			function sedit(num){
 				console.log(num)
 				name_="sname_"+num
@@ -723,6 +761,20 @@
 					$("#searched").append(searched_content)
 				}
 				document.getElementById('searched_content').style.display="";
+				document.getElementById('all_members').style.display="none"
+			}
+			function search_name(){
+				member_name = document.getElementById("names").value
+				console.log(member_name)
+			}
+			function search_section(){
+				member_section = document.getElementById("sections").value
+				console.log(member_section)
+			}
+			function return_page(){
+				
+				document.getElementById('searched_content').style.display="none";
+				document.getElementById('all_members').style.display=""
 			}
 		</script>
 		<!-- jQuery -->

@@ -34,8 +34,7 @@
                         </div>
                         <div class="login-right">
 							<div class="login-right-wrap">
-								<h1>注册</h1>
-								<p class="account-subtitle">访问我们的首页</p>
+								<h1 style="margin-bottom: 5%;">用户注册</h1>
 								
 								<!-- Form -->
 								<form name="submit_form" id="submit_form" action="#">
@@ -50,6 +49,9 @@
 									</div>
 									<div class="form-group">
 										<input id="confirmation" class="form-control" type="password" placeholder="确认密码">
+									</div>
+									<div class="form-group">
+										<input id="section" class="form-control" type="text" placeholder="隶属部门">
 									</div>
 									<div class="form-group mb-0">
 										<button class="btn btn-primary btn-block" type="submit" onclick="alert_something()">注册</button>
@@ -118,6 +120,7 @@
 				email = document.getElementById("email").value
 				password = document.getElementById("password").value
 				confirmation = document.getElementById("confirmation").value
+				section = document.getElementById("section").value
 				if(username=="")
 				{
 					alert("用户名输入有误！")
@@ -138,8 +141,12 @@
 				{
 					alert("密码输入不一致！")
 				}
+				else if(section=="")
+				{
+					alert("隶属部门不能为空！")
+				}
 				else{
-					alert("注册通过！")
+					alert("注册请求已发送，请等待管理员审核！")
 					document.submit_form.action = "login.html"
 					submit_form.submit()
 					//$('#submit_form').action = "login.html"
