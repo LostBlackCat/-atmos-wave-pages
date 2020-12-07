@@ -2259,7 +2259,7 @@ html.menu-opened body {
 	color: #333;
 }
 .notifications .noti-content {
-	height: 240px;
+	height: auto;
 	width: 350px;
 	overflow-y: auto;
 	position: relative;
