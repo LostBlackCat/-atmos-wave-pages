@@ -29,10 +29,10 @@ function nextRadarData(){
 
 
 option_right = {
-  color: colors,
+  color: ['#7DB1B8'],
   toolbox: {
 	show: true,
-	right:'50%',
+	// right:'50%',
 	feature: {
 		dataZoom: {
 			yAxisIndex: 'none'
@@ -53,9 +53,9 @@ option_right = {
 	  left: 10,
   },
   grid: {
-	   left: '5%',
-	   
-	   width:'75%'
+	   left: '10%',
+	//    right:'10%',
+	   width:'66%'
    },
   xAxis: {
 	  name:'(距离：km )',
