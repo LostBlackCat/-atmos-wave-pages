@@ -31,6 +31,8 @@
 <script src="static/js/jquery.nicescroll.min.js"></script>
 <script src="static/js/echarts.js"></script>
 <script src="static/js/dialog.js"></script>
+<script src="static/js/Information.js"></script>
+<script src="static/js/notification.js"></script>
 
 <script>
   $(document).ready(function() {
@@ -85,54 +87,18 @@
 					<!-- Notifications -->
 					<li class="nav-item dropdown noti-dropdown">
 						<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-							<i class="fe fe-bell"></i> <span class="badge badge-pill">3</span>
+							<i class="fe fe-bell"></i> <span class="badge badge-pill" id="infor_count"></span>
 						</a>
 						<div class="dropdown-menu notifications">
 							<div class="topnav-dropdown-header">
-								<span class="notification-title">Notifications</span>
-								<a href="javascript:void(0)" class="clear-noti"> Clear All </a>
+								<span class="notification-title">消息提醒</span>
+								<a href="javascript:void(0)" class="clear-noti"> 隐藏 </a>
 							</div>
 							<div class="noti-content">
 								<ul class="notification-list">
-									<li class="notification-message">
-										<a href="#">
-											<div class="media">
-												<span class="avatar avatar-sm">
-													<img class="avatar-img rounded-circle" alt="User Image" src="static/assets/img/user/user13.jpg">
-												</span>
-												<div class="media-body">
-													<p class="noti-details"><span class="noti-title">云云云</span> 发布一则<span class="noti-title">信息汇总报告，请求审批</span></p>
-													<p class="noti-time"><span class="notification-time">4 mins ago</span></p>
-												</div>
-											</div>
-										</a>
-									</li>
-									<li class="notification-message">
-										<a href="#">
-											<div class="media">
-												<span class="avatar avatar-sm">
-													<img class="avatar-img rounded-circle" alt="User Image" src="static/assets/img/user/歼灭.jpg">
-												</span>
-												<div class="media-body">
-													<p class="noti-details"><span class="noti-title">飞飞飞</span>发布一则<span class="noti-title">信息汇总报告，请求审批</span></p>
-													<p class="noti-time"><span class="notification-time">1 days ago</span></p>
-												</div>
-											</div>
-										</a>
-									</li>
-									<li class="notification-message">
-										<a href="#">
-											<div class="media">
-												<span class="avatar avatar-sm">
-													<img class="avatar-img rounded-circle" alt="User Image" src="static/assets/img/profiles/avatar-122.jpg">
-												</span>
-												<div class="media-body">
-												<p class="noti-details"><span class="noti-title">白白白</span>发布一则<span class="noti-title">信息汇总报告，请求审批</span></p>
-												<p class="noti-time"><span class="notification-time">2 days ago</span></p>
-												</div>
-											</div>
-										</a>
-									</li>
+									<script>
+										readJson()
+									</script>
 								</ul>
 							</div>
 							<div class="topnav-dropdown-footer">
@@ -149,12 +115,7 @@
 					</li>
 					<!-- Write -->
 							<!-- download-->
-							<li >
-								<a data-toggle="modal" href="#text_download" title="数据导出">
-									<i class="fe fe-download"></i>
-								</a>
-							</li>
-					<!-- <li >
+					<li >
 						<a href="#" title="数据导出">
 							<i class="fe fe-download" onclick="dianwo()"></i>
 						</a>
@@ -171,15 +132,10 @@
 							</script>
 			
 						</div>
-					</li> -->
+					</li>
 					<!-- /download>
 					<!-- upload -->
-					<li >
-						<a data-toggle="modal" href="#text_upload" title="数据上传">
-							<i class="fe fe-upload"></i>
-						</a>
-					</li>
-					<!-- <li class="nav-item dropdown noti-dropdown">
+					<li class="nav-item dropdown noti-dropdown">
 						<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" title="数据导入">
 							<i class="fe fe-upload"></i>
 						</a>
@@ -192,7 +148,7 @@
 								<button type="button" class="btn btn-primary" onclick="dianwo1()" style="color:#F8F9FA;float: right;">确认上传</button>
 						</div>
 							
-					</li> -->
+					</li>
 					<!-- /upload -->
 					<!-- User Menu -->
 					<li class="nav-item dropdown has-arrow">
@@ -567,8 +523,7 @@
 				</div>
 			</div>
         </div>
-		<script src="static/js/download.js"></script>
-		<script src="static/js/upload.js"></script>
+
 		
 	</body>
 </html>
