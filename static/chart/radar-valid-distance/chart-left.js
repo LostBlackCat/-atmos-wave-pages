@@ -81,10 +81,10 @@ function nextvalue(){
 }
 
 option_left = {
-  color: colors,
+  color: ['#C33636'],
   toolbox: {
 	show: true,
-	right:'50%',
+	// right:'50%',
 	feature: {
 		dataZoom: {
 			yAxisIndex: 'none'
@@ -105,9 +105,9 @@ option_left = {
 	  left: 10,
   },
   grid: {
-	   left: '5%',
+	   left: '10%',
 	   
-	   width:'75%'
+	   width:'66%'
    },
   xAxis: {
 	  name:'(距离：km )',
