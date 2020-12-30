@@ -77,6 +77,16 @@ function search_member(){
     document.getElementById('searched_content').style.display="";
     document.getElementById('all_members').style.display="none"
 }
+function del(num){
+    console.log('del')
+    name_="name_"+num
+    number_="num_"+num
+    identity_="identity_"+num
+    time_="time_"+num
+    name_infor = document.getElementById(name_).innerHTML
+    number_infor = document.getElementById(number_).innerHTML
+    document.getElementById("del_infor").innerHTML = "删除：" + name_infor + "," + number_infor + "?"
+}
 function search_name(){
     member_name = document.getElementById("names").value
     console.log(member_name)
