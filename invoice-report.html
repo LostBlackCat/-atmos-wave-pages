@@ -98,8 +98,13 @@
 						</div>
 					</li>
             		<!-- /Notifications -->
-            			<!-- download-->
+					<!-- download-->
 					<li >
+						<a data-toggle="modal" href="#text_download" title="数据导出">
+							<i class="fe fe-download"></i>
+						</a>
+					</li>
+					<!-- <li >
 						<a href="#" title="数据导出">
 							<i class="fe fe-download" onclick="dianwo()"></i>
 						</a>
@@ -117,10 +122,15 @@
 							</script>
 			
 						</div>
-					</li>
+					</li> -->
 					<!-- /download-->
 					<!-- upload -->
-					<li class="nav-item dropdown noti-dropdown">
+					<li >
+						<a data-toggle="modal" href="#text_upload" title="数据上传">
+							<i class="fe fe-upload"></i>
+						</a>
+					</li>
+					<!-- <li class="nav-item dropdown noti-dropdown">
 						<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" title="数据导入">
 							<i class="fe fe-upload"></i>
 						</a>
@@ -133,7 +143,7 @@
 								<button type="button" class="btn btn-primary" onclick="dianwo1()" style="color:#F8F9FA;float: right;">确认上传</button>
 						</div>
 							
-					</li>
+					</li> -->
 					<!-- /upload -->
             		<!-- User Menu -->
             		<li class="nav-item dropdown has-arrow">
@@ -211,7 +221,7 @@
 			<!-- Page Wrapper -->
             <div class="page-wrapper">
                 <div class="content container-fluid">
-					<div class="zhezhao" id='zhezhao'  >
+					<!-- <div class="zhezhao" id='zhezhao'  >
 						<div class="tankuang" style="padding: 10px;">
 							<div id="header">
 									<div>			
@@ -325,7 +335,7 @@
 				function hidder1(){
 					document.getElementById('zhezhao1').style.display="none";
 				}
-			</script>
+			</script> -->
 					<!-- Page Header -->
 					<div class="page-header">
 						<div class="row">
@@ -576,6 +586,7 @@
 					</div>
 				</div>
 			</div>
+		
 		</div>
 		<!-- /Delete Modal -->
 		<script src="static/js/management/operation.js"></script>
@@ -599,7 +610,8 @@
 		<!-- Custom JS -->
 		<script src="static/assets/js/script.js"></script>
 
-		
+		<script src="static/js/download.js"></script>
+		<script src="static/js/upload.js"></script>
 		
     </body>
 </html>

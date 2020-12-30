@@ -2,7 +2,7 @@ var dom = document.getElementById("chart-right");
 var chart_right = echarts.init(dom);
 var app = {};
 option_right = null;
-var colors = [ '#2F4554'];
+var colors = [ '#19A15F'];
 var symbolSize = 20;
 var radar_100_data = [[0, 110], [3, 125], [5, 115], [7, 120], [10, 118],[16,128],[18,121],[20, 110], [23, 125], [25, 115], [27, 130], [30, 140]];
 
@@ -32,7 +32,7 @@ option_right = {
   color: colors,
   toolbox: {
 	show: true,
-	right:'50%',
+	// right:'50%',
 	feature: {
 		dataZoom: {
 			yAxisIndex: 'none'
@@ -53,9 +53,9 @@ option_right = {
 	  left: 10,
   },
   grid: {
-	   left: '5%',
+	   left: '10%',
 	   
-	   width:'75%'
+	   width:'70%'
    },
   xAxis: {
 	  name:'(距离：km )',
