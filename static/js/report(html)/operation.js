@@ -2,6 +2,7 @@
 document.getElementById('details_div').style.display="none";
 function detail(number){
 	var obj = eval(Infor)
+	account = eval(User).account
 	console.log('num:', number)	
 	Num = 'num_' + number
 	Name = 'name_' + number
@@ -16,8 +17,17 @@ function detail(number){
 		$("#detail_state").removeClass("bg-danger")
 		$("#detail_state").addClass("bg-warning")
 		document.getElementById('reject_div').style.display="none"
-		document.getElementById('Reject').style.display=""
-		document.getElementById('Access').style.display=""
+		if(obj[number].account != account){
+			document.getElementById('Reject').style.display=""
+			document.getElementById('Access').style.display=""
+			document.getElementById('detail_proposer').innerHTML = document.getElementById(Name).innerHTML
+		}
+		else{
+			document.getElementById('Reject').style.display="none"
+			document.getElementById('Access').style.display="none"
+			document.getElementById('detail_proposer').innerHTML = document.getElementById(Name).innerHTML + "(自己)"; 
+			document.getElementById('detail_proposer').style = "color:#1e88e5"
+		}
 	}
 	else if(State == '已通过'){
 		$("#detail_state").removeClass("bg-warning")
@@ -40,7 +50,7 @@ function detail(number){
 	document.getElementById('detail_number').innerHTML = document.getElementById(Num).innerHTML;
 	document.getElementById('report_id').value = document.getElementById(Num).innerHTML;
 				
-	document.getElementById('detail_proposer').innerHTML = document.getElementById(Name).innerHTML;
+	
 	document.getElementById('report_name').value = document.getElementById(Name).innerHTML;
 	document.getElementById('detail_topic').value = document.getElementById(Topic).innerHTML;
 	document.getElementById('detail_time').innerHTML = document.getElementById(Time).innerHTML;

@@ -419,7 +419,7 @@
 						</div>
 						<div style="width: 100%;float: right;padding-right: 1%;padding-bottom: 1%;padding-top: 1%;">
 							<a data-toggle="modal" href="#edit_invoice_report" style="float: right;">
-								<button class="btn btn-primary" type="button">新增用户</button>
+								<button class="btn btn-primary" type="button" onclick="add_user()">新增用户</button>
 							</a>
 						</div>			
 					</div>
@@ -479,8 +479,8 @@
 							</div>		
 							<div style="width: 100%;float: right;padding-right: 1%;padding-bottom: 1%;padding-top: 1%;">
 								<button class="btn btn-primary" type="button" onclick="return_page()" style="background-color: mediumpurple;border: 1px solid #6610f2;float: right;margin-left: 1%;">返回主页</button>
-								<a data-toggle="modal" href="#edit_invoice_report" style="float: right;">
-									<button class="btn btn-primary" type="button">新增用户</button>
+								<a data-toggle="modal" href="#edit_invoice_report" style="float: right;" >
+									<button class="btn btn-primary" type="button" onclick="add_user()">新增用户</button>
 								</a>
 							</div>		
 						</div>
@@ -496,7 +496,7 @@
 			<div class="modal-dialog modal-dialog-centered" role="document" >
 				<div class="modal-content">
 					<div class="modal-header">
-						<h5 class="modal-title">用户信息编辑</h5>
+						<h5 class="modal-title" id="infor-title">新增用户信息</h5>
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 							<span aria-hidden="true">&times;</span>
 						</button>
@@ -558,7 +558,7 @@
 									</div>
 								</div>
 							</div>
-							<button type="submit" class="btn btn-primary btn-block">保存</button>
+							<button type="submit" id="Save" class="btn btn-primary btn-block">保存</button>
 						</form>
 					</div>
 				</div>

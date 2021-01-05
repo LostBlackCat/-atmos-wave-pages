@@ -6,6 +6,8 @@ function edit(num){
     identity_="identity_"+num
     time_="time_"+num
     console.log(name_)		
+    document.getElementById("infor-title").innerHTML = "用户信息编辑"
+    document.getElementById("infor-title").style = "color:#1e88e5"
     document.getElementById("Name").value=document.getElementById(name_).innerHTML
     document.getElementById("Number").value=document.getElementById(number_).innerHTML
     document.getElementById("Time").value=document.getElementById(time_).innerHTML
@@ -15,7 +17,25 @@ function edit(num){
     document.getElementById("Identity").selected = true
     document.getElementById("userpasswd").value = obj[num].password
     document.getElementById("confirmpasswd").value = obj[num].password
+    document.getElementById("Number").readOnly = true
+    document.getElementById("Save").style = "background:#1e88e5; border: 1px solid #1e88e5"
     
+}
+function add_user(){
+    console.log('add user')
+    today = new Date()
+    Year = today.getYear() + 1900
+    Month = today.getMonth()+1
+    Day = today.getDate()
+    Hour = today.getHours()
+    Min = today.getMinutes()
+    Time = Year + "-" + Month + "-" + Day + " "+ Hour + ":" + Min
+
+    document.getElementById("infor-title").innerHTML = "新增用户信息"
+    document.getElementById("infor-title").style = "color:#43CD80"
+    document.getElementById("Time").value = Time
+    document.getElementById("Number").readOnly = false
+    document.getElementById("Save").style = "background:#43CD80; border: 1px solid #43CD80"
 }
 function sedit(num){
     obj = eval(Infor_Search)
@@ -25,6 +45,8 @@ function sedit(num){
     identity_="sidentity_"+num
     time_="stime_"+num
     console.log(name_)		
+    document.getElementById("infor-title").innerHTML = "用户信息编辑"
+    document.getElementById("infor-title").style = "color:#1e88e5"
     document.getElementById("Name").value=document.getElementById(name_).innerHTML
     console.log(document.getElementById(number_).innerHTML)
     document.getElementById("Number").value=document.getElementById(number_).innerHTML
@@ -34,6 +56,8 @@ function sedit(num){
     document.getElementById("Identity").innerHTML=document.getElementById(identity_).innerHTML
     document.getElementById("userpasswd").value = obj[num].password
     document.getElementById("confirmpasswd").value = obj[num].password
+    document.getElementById("Number").readOnly = "readonly"
+    document.getElementById("Save").style = "background:#1e88e5; border: 1px solid #1e88e5"
 }
 function search_member(){
     obj = eval(Infor_Search)
@@ -70,7 +94,7 @@ function search_member(){
         var searched_content ='<tr>'+'<td><a href="invoice.html" id="snum_'+i+'">'+ obj[i].account + '</a></td>'+'<td>'+'#'+i+'</td>'+
         '<td><h2 class="table-avatar"><a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="static/assets/img/user/user0.jpg" alt="User Image"></a><a id="sname_'+i+'" href="profile.html">'+obj[i].name+
         '</a></h2></td><td id="sidentity_1">'+sidentity+'</td><td id="stime_'+i+'">'+obj[i].date+'</td><td class="text-center"><span class="badge '+state_bg+ ' badge-pill inv-badge">'+obj[i].status+'</span></td><td class="text-right"><div class="actions">'+
-        '<a href="#edit_invoice_report" data-toggle="modal" onclick="sedit('+i+')" class="btn btn-sm bg-success-light mr-2"><i class="fe fe-pencil"></i> 编辑</a><a class="btn btn-sm bg-danger-light" data-toggle="modal" href="#delete_modal">'+
+        '<a href="#edit_invoice_report" data-toggle="modal" onclick="sedit('+i+')" class="btn btn-sm bg-success-light mr-2"><i class="fe fe-pencil"></i> 编辑</a><a class="btn btn-sm bg-danger-light" data-toggle="modal" href="#delete_modal" onclick="del('+i+')">' +
         '<i class="fe fe-trash"></i> 删除</a></div></td></tr>'
         $("#searched").append(searched_content)
     }

@@ -1,6 +1,7 @@
 var Infor = [
     {
-        "name" : "飞飞飞",
+        "name" : "汪宇晖",
+        "account": "Wang",
         "KeyID": "#IN0001",
         "sendData": "2020-11-08 11：00",
         "subject": "人员安排",
@@ -10,6 +11,7 @@ var Infor = [
     },
     {
         "name" : "白白白",
+        "account": "Bai",
         "KeyID": "#IN0002",
         "sendData": "2020-11-08 11：04",
         "subject": "波导信息汇报",
@@ -19,6 +21,7 @@ var Infor = [
     },
     {
         "name" : "飞飞飞",
+        "account": "Fei",
         "KeyID": "#IN0003",
         "sendData": "2020-11-18 12：00",
         "subject": "雷达信息汇报",
